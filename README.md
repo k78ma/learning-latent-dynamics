@@ -2,7 +2,7 @@
 
 Example GIF:
 
-![rollout](rollout.gif)
+<img src="rollout.gif" alt="rollout" width="1000"/>
 
 For all of our GIFs, the ground truth trajectory is shown on the left and the latent rollout is shown on the right.
 
