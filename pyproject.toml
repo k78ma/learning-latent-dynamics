@@ -1,0 +1,19 @@
+[project]
+name = "embed2control"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "imageio>=2.37.2",
+    "mediapy>=1.2.4",
+    "matplotlib>=3.9.3",
+    "mujoco>=3.3.7",
+    "numpy>=2.3.5",
+    "scikit-learn>=1.7.2",
+    "torch>=2.9.1",
+    "torchvision>=0.24.1",
+    "einops>=0.8.1",
+    "tensorboard>=2.20.0",
+    "tqdm>=4.67.1",
+]

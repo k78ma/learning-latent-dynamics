@@ -1,0 +1,21 @@
+<mujoco>
+
+    <worldbody>
+        <!-- RDF, to resolve later if needed. -->
+        <!-- <camera name="camera_1" mode="fixed" pos="0 5. 0" xyaxes="1 0 0 0 0 -1"/>  -->
+
+        <!-- RUB (MuJoCo viewer camera default) -->
+        <!-- Cameras look towards the negative Z axis of the camera frame, while positive X and Y correspond to right and up in the image plane, respectively.-->
+        <camera name="camera_1" mode="fixed" pos="0 -5. 0" resolution="16 16" xyaxes="1 0 0 0 0 1"/>
+
+        <body name="link_1" pos="0 0 0">
+            <joint name="joint_1" type="hinge" axis="0 1 0" pos="0 0 0"/>
+            <geom name="link_1_geom" type="box" size="0.1 0.1 1.0" pos="0 0 1.0"/>
+        </body>
+    </worldbody>
+
+    <!-- motors -->
+    <actuator>
+        <motor name="motor_1" joint="joint_1" ctrlrange="-2 2" gear="100"/>
+    </actuator>
+</mujoco>

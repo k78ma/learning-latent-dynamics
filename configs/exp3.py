@@ -1,0 +1,51 @@
+class E2C_Config:
+    # Env
+    mjcf_file: str = "sim/arm.mjcf.xml"
+    fps: int = 30
+    traj_seconds: int = 5
+    camera_name: str = "camera_1"
+    num_trajectories: int = 100
+    randomize_init: bool = True
+    ctrl_max: float = 1.0
+
+    data_dir: str = "data/raw"
+    frames_filename: str = "frames.npy"
+    actions_filename: str = "actions.npy"
+
+    # VAE
+    img_height: int = 32
+    img_width: int = 32
+    channels_per_img: int = 1
+    latent_dim: int = 4
+    state_seq_len: int = 3
+    vae_type: str = "conv"
+    conv_channels: list[int] = [32, 64, 128]
+    conv_kernel_size: int | list[int] = 4
+    conv_stride: int | list[int] = 2
+    conv_padding: int | list[int] = 1
+
+    # Dynamics
+    latent_dynamics_model_type: str = "mlp"
+    mlp_hidden_dims: list[int] = [250, 250]
+    rnn_hidden_dim: int = 256
+    rnn_seq_len: int = 20
+
+    # Tracking
+    experiment_name: str = None
+    experiment_base_dir: str = "experiments"
+
+    # Training
+    epochs: int = 40
+    epochs_per_checkpoint: int = 10
+    beta_kl: float = 1.0
+    lr: float = 3e-4
+    batch_size: int = 128
+
+    # Misc
+    eps = 1e-9
+    random_seed: int = 0
+    iterations_per_log: int = 1000
+
+
+e2c_config = E2C_Config()
+
